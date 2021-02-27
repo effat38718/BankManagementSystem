@@ -8,5 +8,10 @@ namespace BankManagementSystem
 {
     class Address
     {
+        private string roadNo;
+        private string houseNo;
+        private string city;
+        private string country;
+
     }
 }
