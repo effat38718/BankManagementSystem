@@ -8,5 +8,23 @@ namespace BankManagementSystem
 {
     class Bank
     {
+        private string bankName;
+
+        public void AddAccount()
+        {
+
+        }
+        public void DeleteAccount(int accountNumber)
+        {
+
+        }
+        public void Transaction(int transactionType)
+        {
+
+        }
+        public void PrintAccountDetails()
+        {
+
+        }
     }
 }

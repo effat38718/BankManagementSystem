@@ -13,5 +13,10 @@ namespace BankManagementSystem
         private string city;
         private string country;
 
+        public string GetAddress()
+        {
+            return "";
+        }
+
     }
 }
