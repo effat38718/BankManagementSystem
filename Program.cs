@@ -37,18 +37,33 @@ namespace BankManagementSystem
 
         public void launchService()
         {
-            if(serviceNo == 1)
+            Bank bank = new Bank();
+
+            if (serviceNo == 1)
             {
-                Bank bank = new Bank();
                 bank.AddAccount();
             }
             else if(serviceNo == 2)
             {
-
+                Console.WriteLine("Enter your A/C No: ");
+                int accountNo = Console.Read();
+                bank.DeleteAccount(accountNo);
             }
             else if (serviceNo == 3)
             {
+                Console.WriteLine("ENTER YOUR A/C NO: ");
+                int accountNo = Convert.ToInt32(Console.ReadLine());
+                //check if the A/C No exist or not
 
+                Console.WriteLine("WHAT TYPE OF TRANSACTION YOU WANT TO PERFORM? ");
+
+                Console.WriteLine("1. Withdraw");
+                Console.WriteLine("2. Diposit");
+                Console.WriteLine("3. Transfer");
+                Console.WriteLine("=======================");
+                Console.WriteLine("Press the Transaction Type");
+                int transactionType = Convert.ToInt32(Console.ReadLine());
+                bank.Transaction(transactionType,accountNo);
             }
             else if (serviceNo == 4)
             {

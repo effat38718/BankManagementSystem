@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +9,22 @@ namespace BankManagementSystem
 {
     class Account
     {
-        public int accountNumber { get; set; }
+        public static int accountNumber = 0;
         public string accountName { get; set; }
         public double balance { get; set; }
         private Address address;
+
+        public Account()
+        {
+            /*TextReader reader = File.OpenText("E:/AIUB/8th semester/OOP2 (C#)/code/BankManagementSystem/currentAccountNo.txt");
+            accountNumber = int.Parse(reader.ReadLine());
+            accountNumber++;
+            reader.Close();
+            StreamWriter sw = new StreamWriter("E:/AIUB/8th semester/OOP2 (C#)/code/BankManagementSystem/currentAccountNo.txt");
+            sw.Write(accountNumber);
+            sw.Close();*/
+
+        }
 
         public void setAddress()
         {
@@ -38,7 +51,8 @@ namespace BankManagementSystem
         }
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account Number: " + this.accountNumber + "  Account Name: " + this.accountName + "  Balance: " + this.balance);
+            Console.WriteLine("Account Number: " + accountNumber + "  Account Name: " + this.accountName + "  Balance: " + this.balance);
+            Console.WriteLine(this.getAddress());
         }
 
         public (string,string,string,string) takeAddressInput()
