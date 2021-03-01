@@ -40,7 +40,7 @@ namespace BankManagementSystem
 
         public string GetAddress()
         {
-            return "";
+            return "Road No: " + this.roadNo + ", House No: " + this.houseNo + ", City: " + this.city + ", Country: " + this.country;
         }
 
     }
