@@ -1,0 +1,7 @@
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\bin\Debug\BankManagementSystem.exe.config
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\bin\Debug\BankManagementSystem.exe
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\bin\Debug\BankManagementSystem.pdb
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\obj\Debug\BankManagementSystem.csprojAssemblyReference.cache
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\obj\Debug\BankManagementSystem.csproj.CoreCompileInputs.cache
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\obj\Debug\BankManagementSystem.exe
+E:\AIUB\8th semester\OOP2 (C#)\code\BankManagementSystem\obj\Debug\BankManagementSystem.pdb

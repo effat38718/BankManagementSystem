@@ -8,15 +8,20 @@ namespace BankManagementSystem
 {
     class Account
     {
-        private int accountNumber { get; set; }
-        private string accountName { get; set; }
-        private double balance { get; set; }
-        private Address address { get; set; }
+        public int accountNumber { get; set; }
+        public string accountName { get; set; }
+        public double balance { get; set; }
+        private Address address;
 
         public void setAddress()
         {
                 var addressInfo = this.takeAddressInput();
                 this.address= new Address(addressInfo.Item1,addressInfo.Item2,addressInfo.Item3,addressInfo.Item4); 
+        }
+
+        public string getAddress()
+        {
+            return this.address.GetAddress();
         }
 
         public void Withdraw(double amount)
@@ -33,7 +38,7 @@ namespace BankManagementSystem
         }
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account Number: " + this.accountNumber + "Account Name: " + this.accountName + "Balance: " + this.balance);
+            Console.WriteLine("Account Number: " + this.accountNumber + "  Account Name: " + this.accountName + "  Balance: " + this.balance);
         }
 
         public (string,string,string,string) takeAddressInput()

@@ -19,7 +19,13 @@ namespace BankManagementSystem
 
         public void AddAccount()
         {
-
+            Account account = new Account();
+            account.accountNumber = 1;
+            account.accountName = "Careless";
+            account.balance = 1000;
+            account.setAddress();
+            account.ShowAccountInformation();
+            Console.WriteLine(account.getAddress());
         }
         public void DeleteAccount(int accountNumber)
         {

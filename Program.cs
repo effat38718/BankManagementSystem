@@ -39,7 +39,8 @@ namespace BankManagementSystem
         {
             if(serviceNo == 1)
             {
-
+                Bank bank = new Bank();
+                bank.AddAccount();
             }
             else if(serviceNo == 2)
             {
