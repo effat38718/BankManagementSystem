@@ -13,6 +13,30 @@ namespace BankManagementSystem
         private double balance;
         private Address address;
 
+        public int AccountNumber
+        {
+            set { this.accountNumber = value; }
+            get { return this.accountNumber; }
+        }
+
+        public string AccountName
+        {
+            set { this.accountName = value; }
+            get { return this.accountName; }
+        }
+
+        public double Balance
+        {
+            set { this.balance = value; }
+            get { return this.balance; }
+        }
+
+        public Address Address
+        {
+            set { this.Address = value; }
+            get { return this.Address; }
+        }
+
         public void Withdraw(double amount)
         {
 
@@ -27,7 +51,7 @@ namespace BankManagementSystem
         }
         public void ShowAccountInformation()
         {
-
+            
         }
     }
 }

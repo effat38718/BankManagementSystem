@@ -9,6 +9,13 @@ namespace BankManagementSystem
     class Bank
     {
         private string bankName;
+        Account[] myBank;
+
+        public string Bankname
+        {
+            set { this.bankName = value; }
+            get { return this.bankName; }
+        }
 
         public void AddAccount()
         {
