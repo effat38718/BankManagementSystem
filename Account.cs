@@ -27,8 +27,8 @@ namespace BankManagementSystem
 
         public void setAddress()
         {
-                var addressInfo = this.takeAddressInput();
-                this.address= new Address(addressInfo.Item1,addressInfo.Item2,addressInfo.Item3,addressInfo.Item4); 
+            var addressInfo = this.takeAddressInput();
+            this.address= new Address(addressInfo.Item1,addressInfo.Item2,addressInfo.Item3,addressInfo.Item4); 
         }
 
         public string getAddress()
@@ -42,7 +42,7 @@ namespace BankManagementSystem
         }
         public void Deposit(double amount)
         {
-
+            balance = balance + amount;
         }
         public void Transfer(Account reciever, double amount)
         {

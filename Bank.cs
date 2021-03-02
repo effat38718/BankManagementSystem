@@ -43,7 +43,12 @@ namespace BankManagementSystem
         }
         public void DeleteAccount(int accountNumber)
         {
-
+            for (int i = accountNumber - 1; i<myBank.Length; i++)
+            {
+                myBank[i] = myBank[i + 1];
+            }
+            Console.WriteLine();
+            Console.WriteLine("ACCOUNT DELETED SUCCESSFULLY!");
         }
         public void Transaction(int transactionType, int acNo)
         {
