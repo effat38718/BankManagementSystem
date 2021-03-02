@@ -8,8 +8,9 @@ namespace BankManagementSystem
 {
     class Bank
     {
+        public static int counter = 0;
         private string bankName;
-        Account[] myBank = new Account[100];
+        public Account[] myBank;
 
         public string Bankname
         {
@@ -17,18 +18,26 @@ namespace BankManagementSystem
             get { return this.bankName; }
         }
 
+        public Bank()
+        {
+            this.myBank = new Account[100];
+        }
+
         public void AddAccount()
         {
-            myBank[Account.accountNumber] = new Account();
+            Account account = new Account(counter);
+            
             Console.WriteLine("Enter your A/C Name: ");
-            myBank[Account.accountNumber].accountName = Console.ReadLine();
+            account.accountName = Console.ReadLine();
             Console.WriteLine("How Much Money you want to Deposit in the beginning : ");
-            myBank[Account.accountNumber].balance = Convert.ToInt32(Console.ReadLine());
-            myBank[Account.accountNumber].setAddress();
-            myBank[Account.accountNumber].ShowAccountInformation();
+            account.balance = Convert.ToInt32(Console.ReadLine());
+            account.setAddress();
+            account.ShowAccountInformation();
+            myBank[counter] = account;
+            counter++;
+            Console.WriteLine();
             Console.WriteLine("ACCOUNT CREATED SUCCESSFULLY!");
             //myBank[Account.accountNumber] = account;
-            Account.accountNumber++;
             //This record need to be kept in a database or a text file in JSON format
             //launchAgain();
         }
@@ -38,19 +47,19 @@ namespace BankManagementSystem
         }
         public void Transaction(int transactionType, int acNo)
         {
-            Account account = myBank[acNo];
+            
             if (transactionType == 1)
             {
                 Console.WriteLine("ENTER THE AMOUNT YOU WANT TO WITHDRAW : ");
                 double amount = Convert.ToDouble(Console.ReadLine());
-                account.Withdraw(amount);
+                this.myBank[acNo].Withdraw(amount);
                 //launchAgain();
             }
             else if (transactionType == 2)
             {
                 Console.WriteLine("ENTER THE AMOUNT YOU WANT TO DEPOSIT : ");
                 double amount = Convert.ToDouble(Console.ReadLine());
-                account.Deposit(amount);
+                this.myBank[acNo].Deposit(amount);
                 //launchAgain();
             }
             else if(transactionType == 3)
@@ -60,7 +69,7 @@ namespace BankManagementSystem
                 Account receiver = myBank[accountNo];
                 Console.WriteLine("ENTER THE AMOUNT YOU WANT TO TRANSFER: ");
                 double amount = Convert.ToDouble(Console.ReadLine());
-                account.Transfer(receiver,amount);
+                this.myBank[acNo].Transfer(receiver,amount);
                 //launchAgain();
             }
             else
@@ -73,8 +82,7 @@ namespace BankManagementSystem
             Console.WriteLine("ENTER YOUR A/C NO: ");
             int accountNo = Convert.ToInt32(Console.ReadLine());
 
-            Account account = myBank[accountNo];
-            account.ShowAccountInformation();
+            this.myBank[accountNo].ShowAccountInformation();
             //launchAgain();
         }
 

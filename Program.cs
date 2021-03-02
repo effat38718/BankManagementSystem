@@ -12,9 +12,23 @@ namespace BankManagementSystem
         public int serviceNo;
         static void Main(string[] args)
         {
-            Program program = new Program();
+            /*Program program = new Program();
             program.launchApp();
-            program.launchService();
+            program.launchService();*/
+
+            //Create an account
+            Bank bank = new Bank();
+            bank.AddAccount();
+            bank.AddAccount();
+
+            //Do a Transaction ==== WITHDRAW
+            bank.Transaction(1, 0); //Transaction for A/C No 0
+            bank.PrintAccountDetails();
+            //bank.PrintAccountDetails();
+
+            //Do a Transaction ==== TRANSFER
+            bank.Transaction(3, 0);
+            bank.PrintAccountDetails();
         }
 
         public void launchApp()

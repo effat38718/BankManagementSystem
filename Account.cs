@@ -9,13 +9,12 @@ namespace BankManagementSystem
 {
     class Account
     {
-        public static int accountNumber = 0;
+        public int accountNumber ;
         public string accountName { get; set; }
         public double balance { get; set; }
         private Address address;
 
-        public Account()
-        {
+        public Account(int accountNumber) {
             /*TextReader reader = File.OpenText("E:/AIUB/8th semester/OOP2 (C#)/code/BankManagementSystem/currentAccountNo.txt");
             accountNumber = int.Parse(reader.ReadLine());
             accountNumber++;
@@ -23,7 +22,7 @@ namespace BankManagementSystem
             StreamWriter sw = new StreamWriter("E:/AIUB/8th semester/OOP2 (C#)/code/BankManagementSystem/currentAccountNo.txt");
             sw.Write(accountNumber);
             sw.Close();*/
-
+            this.accountNumber = accountNumber;
         }
 
         public void setAddress()
@@ -39,7 +38,7 @@ namespace BankManagementSystem
 
         public void Withdraw(double amount)
         {
-
+            balance = balance - amount;
         }
         public void Deposit(double amount)
         {
@@ -52,7 +51,7 @@ namespace BankManagementSystem
         }
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account Number: " + accountNumber + "  Account Name: " + this.accountName + "  Balance: " + this.balance);
+            Console.WriteLine("Account Number: " + this.accountNumber + "  Account Name: " + this.accountName + "  Balance: " + this.balance);
             Console.WriteLine(this.getAddress());
         }
 
