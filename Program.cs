@@ -15,9 +15,6 @@ namespace BankManagementSystem
             Program program = new Program();
             program.launchApp();
             program.launchService();
-
-            
-
         }
 
         public void launchApp()
@@ -58,7 +55,7 @@ namespace BankManagementSystem
                 Console.WriteLine("WHAT TYPE OF TRANSACTION YOU WANT TO PERFORM? ");
 
                 Console.WriteLine("1. Withdraw");
-                Console.WriteLine("2. Diposit");
+                Console.WriteLine("2. Deposit");
                 Console.WriteLine("3. Transfer");
                 Console.WriteLine("=======================");
                 Console.WriteLine("Press the Transaction Type");
@@ -67,7 +64,7 @@ namespace BankManagementSystem
             }
             else if (serviceNo == 4)
             {
-
+                bank.PrintAccountDetails();
             } 
             else
             {

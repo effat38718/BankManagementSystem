@@ -47,7 +47,8 @@ namespace BankManagementSystem
         }
         public void Transfer(Account reciever, double amount)
         {
-            
+            reciever.balance += amount;
+            //sender.balance -= amount;
         }
         public void ShowAccountInformation()
         {
